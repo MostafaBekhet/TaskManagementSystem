@@ -1,0 +1,15 @@
+D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Application\bin\Debug\net8.0\TMS.Application.deps.json
+D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Application\bin\Debug\net8.0\TMS.Application.dll
+D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Application\bin\Debug\net8.0\TMS.Application.pdb
+D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Application\bin\Debug\net8.0\TMS.Domain.dll
+D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Application\bin\Debug\net8.0\TMS.Domain.pdb
+D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Application\obj\Debug\net8.0\TMS.Application.csproj.AssemblyReference.cache
+D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Application\obj\Debug\net8.0\TMS.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Application\obj\Debug\net8.0\TMS.Application.AssemblyInfoInputs.cache
+D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Application\obj\Debug\net8.0\TMS.Application.AssemblyInfo.cs
+D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Application\obj\Debug\net8.0\TMS.Application.csproj.CoreCompileInputs.cache
+D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Application\obj\Debug\net8.0\TMS.Appl.24C5A7C5.Up2Date
+D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Application\obj\Debug\net8.0\TMS.Application.dll
+D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Application\obj\Debug\net8.0\refint\TMS.Application.dll
+D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Application\obj\Debug\net8.0\TMS.Application.pdb
+D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Application\obj\Debug\net8.0\ref\TMS.Application.dll

@@ -1,0 +1,54 @@
+@TaskManagementSystem.API_HostAddress = https://localhost:7123
+
+@token = CfDJ8ABmHXKCO1BCo9jhJigf_PupUUUQb0ULtcD1XlS62ceHFarmpIyBEA7eFA8gUfqp-njVK-6er3h-IpJfQAP_JZVqAkiTk-gkncuVeMHPqga03-Kz2OZrfD8nBdFzDnHPq4cnGvSqz0IOsaPQwBI8AqlvHx-0lmZJBALTla6iBTdlqC5YeKD0q2YLDgM_hDOupu563Jsfmw-2B2NsN64UMduShpU8RkpNQbjUn0k9dDkNBpmuL7WGU_WkM8zdZ47KQKW3mqPE7Rx8c5zrmZB3hKshp5TiarBPzPyiGs3R0xlFnuowMGjxiIvqvPbG3V7Om8xDGDcTzeCcfhnoI-vZCnFbDQ5E8uwBWV832c_gb_eFXKno4ANRYAcUJLSYN-caTrXEEprQvqkWzcgGQWvGfOajAp-_IuMnRAEvt8IH8l-94lxT225H48dXXuloc3RiPX124k35kJxEmEGHuIa1xMZLKKPVhp-oFw9USEzNT6LPDaqAZPcAXnnxEMm-ivXKHraWs9Ne3sXbJheiXzZYWnJR_XPEWd1mzZq5YQJupj7hhqF663WONV7SnI38Dy-gEkotzI8rX5sfYQUYouVw75SG1N9cVEdOnsMKe8Pt5ZsQ0J0q1yQx8DLvKTJVderCEe9T5OT0jq-1HSKufekvZeB9ygbMBSZXHaz3UbltHfAYY4Cvn0IVlucQ6ZWxhCgPaZo_Tq4cwECfv66p5oB8LmKPuAErEr27RVseut1Kuj4ojpeN9-fMqNjuJS3JNZYaJEKiFMq4szzfqxjCFsMQlfF0Pgu5dkTWjXFW8mtRZiuQ
+
+GET {{TaskManagementSystem.API_HostAddress}}/api/weatherforecast/currentDay
+
+###
+
+POST {{TaskManagementSystem.API_HostAddress}}/api/weatherforecast
+Content-Type: application/json
+
+"Mosta"
+
+###
+
+POST {{TaskManagementSystem.API_HostAddress}}/api/identity/CustomRegister
+Content-Type: application/json
+
+{
+  "firstName": "testUser",
+  "lastName": "last",
+  "email": "user@test.com",
+  "password": "Password1!"
+}
+
+###
+
+POST {{TaskManagementSystem.API_HostAddress}}/api/identity/login
+Content-Type: application/json
+
+{
+  "email": "user@test.com",
+  "password": "Password1!"
+}
+
+###
+
+POST {{TaskManagementSystem.API_HostAddress}}/api/v1/tasks
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "title": "first task",
+  "description": "be done soon",
+  "dueDate": "2024-10-06T20:52:25.389Z",
+  "status": 0,
+  "priorityLevel": 0,
+  "createdByUserId": "827964bd-b6e5-4f6a-bf63-e2e5ba40c2ed"
+}
+
+
+###
+
+DELETE {{TaskManagementSystem.API_HostAddress}}/api/v1/tasks/10
