@@ -3,18 +3,6 @@
   "WorkspaceRootPath": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8794982E-87EA-4684-8F96-CE68343B34DE}|TMS.Infrastructure\\TMS.Infrastructure.csproj|d:\\users\\mosta\\documents\\projects\\expertflow\\clean\\task mangement system\\tms.infrastructure\\repositories\\teamtasksrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8794982E-87EA-4684-8F96-CE68343B34DE}|TMS.Infrastructure\\TMS.Infrastructure.csproj|solutionrelative:tms.infrastructure\\repositories\\teamtasksrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8794982E-87EA-4684-8F96-CE68343B34DE}|TMS.Infrastructure\\TMS.Infrastructure.csproj|d:\\users\\mosta\\documents\\projects\\expertflow\\clean\\task mangement system\\tms.infrastructure\\repositories\\teamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8794982E-87EA-4684-8F96-CE68343B34DE}|TMS.Infrastructure\\TMS.Infrastructure.csproj|solutionrelative:tms.infrastructure\\repositories\\teamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2574C43-D5D5-4093-901A-3C75735E12FE}|TMS.Application\\TMS.Application.csproj|d:\\users\\mosta\\documents\\projects\\expertflow\\clean\\task mangement system\\tms.application\\tasks\\queries\\getallquery\\getalltasksqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2574C43-D5D5-4093-901A-3C75735E12FE}|TMS.Application\\TMS.Application.csproj|solutionrelative:tms.application\\tasks\\queries\\getallquery\\getalltasksqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5B4FE59E-DF63-4F39-8F5B-D0F4BCF5BF2A}|TaskManagementSystem.API\\TaskManagementSystem.API.csproj|d:\\users\\mosta\\documents\\projects\\expertflow\\clean\\task mangement system\\taskmanagementsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B4FE59E-DF63-4F39-8F5B-D0F4BCF5BF2A}|TaskManagementSystem.API\\TaskManagementSystem.API.csproj|solutionrelative:taskmanagementsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -31,51 +19,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TeamTasksRepository.cs",
-              "DocumentMoniker": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Infrastructure\\Repositories\\TeamTasksRepository.cs",
-              "RelativeDocumentMoniker": "TMS.Infrastructure\\Repositories\\TeamTasksRepository.cs",
-              "ToolTip": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Infrastructure\\Repositories\\TeamTasksRepository.cs",
-              "RelativeToolTip": "TMS.Infrastructure\\Repositories\\TeamTasksRepository.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T18:45:04.473Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TeamRepository.cs",
-              "DocumentMoniker": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Infrastructure\\Repositories\\TeamRepository.cs",
-              "RelativeDocumentMoniker": "TMS.Infrastructure\\Repositories\\TeamRepository.cs",
-              "ToolTip": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Infrastructure\\Repositories\\TeamRepository.cs",
-              "RelativeToolTip": "TMS.Infrastructure\\Repositories\\TeamRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T18:45:02.974Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GetAllTasksQueryHandler.cs",
-              "DocumentMoniker": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Application\\Tasks\\Queries\\GetAllQuery\\GetAllTasksQueryHandler.cs",
-              "RelativeDocumentMoniker": "TMS.Application\\Tasks\\Queries\\GetAllQuery\\GetAllTasksQueryHandler.cs",
-              "ToolTip": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Application\\Tasks\\Queries\\GetAllQuery\\GetAllTasksQueryHandler.cs",
-              "RelativeToolTip": "TMS.Application\\Tasks\\Queries\\GetAllQuery\\GetAllTasksQueryHandler.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwCkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T18:44:29.795Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TaskManagementSystem.API\\Program.cs",
               "RelativeDocumentMoniker": "TaskManagementSystem.API\\Program.cs",
               "ToolTip": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TaskManagementSystem.API\\Program.cs",
               "RelativeToolTip": "TaskManagementSystem.API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T17:58:01.804Z",
               "EditorCaption": ""
