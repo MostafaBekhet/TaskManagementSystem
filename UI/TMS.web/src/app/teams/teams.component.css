@@ -1,0 +1,8 @@
+.container {
+  width: 60%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #cbb1b171;
+
+  backdrop-filter: blur(10px);
+}

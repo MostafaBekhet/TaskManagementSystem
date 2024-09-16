@@ -1,4 +1,6 @@
-﻿namespace TaskManagementSystem.API.Middlewares
+﻿using TMS.Domain.Exceptions;
+
+namespace TaskManagementSystem.API.Middlewares
 {
     public class ErrorHandlingMiddleWare
     {
@@ -14,6 +16,20 @@
             try
             {
                 await _next(context);
+            }
+            catch(NotFoundException ex)
+            {
+                context.Response.StatusCode = ex.StatusCode;
+                await context.Response.WriteAsync(ex.Message);
+            }
+            catch(ForbiddenException ex)
+            {
+                context.Response.StatusCode = ex.StatusCode;
+            }
+            catch(NotValidOperationException ex)
+            {
+                context.Response.StatusCode = ex.StatusCode;
+                await context.Response.WriteAsync(ex.Message);
             }
             catch (Exception ex)
             {

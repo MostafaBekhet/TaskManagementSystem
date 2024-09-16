@@ -13,3 +13,4 @@ D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.App
 D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Application\obj\Debug\net8.0\refint\TMS.Application.dll
 D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Application\obj\Debug\net8.0\TMS.Application.pdb
 D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Application\obj\Debug\net8.0\ref\TMS.Application.dll
+D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Application\obj\Debug\net8.0\TMS.Application.sourcelink.json

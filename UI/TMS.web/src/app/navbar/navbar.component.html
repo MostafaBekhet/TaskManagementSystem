@@ -1,0 +1,133 @@
+<!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+  <div class="container">
+    <!--logo-->
+    <a class="navbar-brand fs-4" href="#">Task Management System</a>
+    <!--togle btn-->
+    <button
+      class="navbar-toggler shadow-none border-0"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--side bar-->
+    <div
+      class="sidebar offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <!--side bar header-->
+      <div class="offcanvas-header text-white border-bottom">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">TMS</h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white shadow-none"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <!--side bar body-->
+      <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+        <ul
+          class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3"
+        >
+          <li class="nav-item mx-2">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Services
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Users</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" routerLink="/teams">Teams</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" routerLink="/dashboard"
+                  >Tasks</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <!--login / register-->
+        <div
+          class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3"
+        >
+          <!-- Show Login/Register when user is not logged in -->
+          <ng-container *ngIf="!isLoggedIn(); else loggedInMenu">
+            <a class="text-white" routerLink="/login">Login</a>
+            <a
+              class="nav-link text-decoration-none px-3 py-1 rounded-4"
+              routerLink="/register"
+              style="background-color: #f94ca4"
+              >Register</a
+            >
+          </ng-container>
+
+          <!-- Profile Dropdown when user is logged in -->
+          <ng-template #loggedInMenu>
+            <div class="dropdown">
+              <a
+                class="dropdown-toggle"
+                href="#"
+                id="profileDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="../assets/images/user.png"
+                  alt="Profile"
+                  class="rounded-circle"
+                  width="30"
+                  height="30"
+                />
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="profileDropdown"
+              >
+                <li>
+                  <a class="dropdown-item" routerLink="/account">Account</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" routerLink="/privacy">Privacy</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#" (click)="onLogout()"
+                    >Log out</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

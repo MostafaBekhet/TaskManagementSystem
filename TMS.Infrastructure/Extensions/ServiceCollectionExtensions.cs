@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using TMS.Application.Tasks.Common.Interfaces;
+using TMS.Application.Common.Interfaces;
 using TMS.Domain.Entities;
 using TMS.Infrastructure.Persistence;
 using TMS.Infrastructure.Repositories;
@@ -27,6 +27,10 @@ namespace TMS.Infrastructure.Extensions
             //**add IRepositories sercvices scope
             services.AddScoped<IRoleSeeder, RoleSeeder>();
             services.AddScoped<ITaskRepository, TaskRepository>();
+            services.AddScoped<ITeamRepository, TeamRepository>();
+            services.AddScoped<ITeamTasksRepository, TeamTasksRepository>();
+            services.AddScoped<ICommentRepository, CommentRepository>();
+            services.AddScoped<IUserTeamsRepository, UserTeamsRepository>();
         }
     }
 }

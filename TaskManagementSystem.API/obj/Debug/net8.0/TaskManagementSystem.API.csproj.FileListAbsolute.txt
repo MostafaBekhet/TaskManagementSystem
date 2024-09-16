@@ -166,3 +166,4 @@ D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TaskMan
 D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TaskManagementSystem.API\obj\Debug\net8.0\TaskManagementSystem.API.pdb
 D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TaskManagementSystem.API\obj\Debug\net8.0\TaskManagementSystem.API.genruntimeconfig.cache
 D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TaskManagementSystem.API\obj\Debug\net8.0\ref\TaskManagementSystem.API.dll
+D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TaskManagementSystem.API\obj\Debug\net8.0\TaskManagementSystem.API.sourcelink.json

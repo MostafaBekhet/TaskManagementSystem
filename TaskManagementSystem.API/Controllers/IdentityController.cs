@@ -34,10 +34,10 @@ namespace TaskManagementSystem.API.Controllers
         {
             ErrorOr<bool> RoleAssigned = await mediator.Send(command);
 
-            if (RoleAssigned == false)
-            {
-                return NotFound("user not found");
-            }
+            //if (RoleAssigned == false)
+            //{
+            //    return NotFound("user not found");
+            //}
 
             return RoleAssigned.Match(
                 updated => NoContent(),

@@ -1,0 +1,314 @@
+<section class="vh-100 d-flex justify-content-center align-items-start">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2>Task Details</h2>
+      <div>
+        <button class="btn btn-primary me-2" (click)="openAssignTeamModel()">
+          Assign To Team
+        </button>
+        <button class="btn btn-primary me-2" (click)="openAssignMemberModel()">
+          Assign To User
+        </button>
+        <button class="btn btn-primary" (click)="openCommentModel()">
+          Add Comment
+        </button>
+      </div>
+    </div>
+    <form (ngSubmit)="onSave()" #taskForm="ngForm">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          [(ngModel)]="task.title"
+          name="title"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+          class="form-control"
+          id="description"
+          [(ngModel)]="task.description"
+          name="description"
+        ></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="status" class="form-label">Status</label>
+        <select
+          class="form-select"
+          id="status"
+          [(ngModel)]="task.status"
+          name="status"
+          required
+        >
+          <option value="0">To Do</option>
+          <option value="1">In Progress</option>
+          <option value="2">Completed</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="priorityLevel" class="form-label">Priority Level</label>
+        <select
+          class="form-select"
+          id="priorityLevel"
+          [(ngModel)]="task.priorityLevel"
+          name="priorityLevel"
+          required
+        >
+          <option value="0">Low</option>
+          <option value="1">Medium</option>
+          <option value="2">High</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="dueDate" class="form-label">Due Date</label>
+        <input
+          type="date"
+          class="form-control"
+          id="dueDate"
+          [(ngModel)]="task.dueDate"
+          name="dueDate"
+          required
+        />
+      </div>
+
+      <!-- comments section -->
+      <div class="mb-3">
+        <label for="comments" class="form-label">Comments</label>
+        <div *ngIf="comments.length > 0">
+          <ul class="list-group">
+            <li *ngFor="let comment of comments" class="list-group-item">
+              <div class="d-flex justify-content-between">
+                <span>Created By: {{ comment.email }} </span>
+                <span
+                  >Commented At: {{ getTimeAgo(comment.commentDate) }}
+                </span>
+              </div>
+              <div class="mt-2">
+                {{ comment.commentText }}
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div *ngIf="comments.length === 0" class="text-muted">
+          No comments available.
+        </div>
+      </div>
+
+      <!-- assigned team section -->
+      <div class="mb-3">
+        <label for="assignedTeam" class="form-label">Assigned Team</label>
+
+        <div *ngIf="assignedTeam">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between">
+                <span>Team ID: {{ assignedTeam.teamId }}</span>
+                <span>Team Name: {{ assignedTeam.teamName }}</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div *ngIf="!assignedTeam" class="text-muted">
+          Not assigned to a team yet.
+        </div>
+      </div>
+
+      <!-- assigned user section -->
+      <div class="mb-3">
+        <label for="assignedUser" class="form-label">Assigned User</label>
+
+        <div *ngIf="assignedUser">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between">
+                <span
+                  >Name:
+                  {{
+                    assignedUser.firstName + " " + assignedUser.lastName
+                  }}</span
+                >
+                <span>Email: {{ assignedUser.email }}</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div *ngIf="!assignedUser" class="text-muted">
+          Not assigned to a user yet.
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="!hasChanges()"
+        >
+          Save
+        </button>
+        <button type="button" class="btn btn-secondary" (click)="onClose()">
+          Close
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- comment model -->
+  <div class="modal" tabindex="-1" role="dialog" id="commentModel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div
+          class="modal-header d-flex justify-content-between align-items-center"
+        >
+          <h5 class="modal-title">Add Comment</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+            (click)="closeCommentMode()"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Comment:</label>
+              <textarea
+                class="form-control"
+                id="comment-text"
+                [(ngModel)]="commentText"
+                name="commentText"
+              ></textarea>
+            </div>
+          </form>
+        </div>
+        <div
+          class="modal-footer d-flex justify-content-center align-items-center"
+        >
+          <button type="button" class="btn btn-primary" (click)="addCommnet()">
+            Save changes
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="closeCommentMode()"
+            data-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- assign team model -->
+  <div class="modal" tabindex="-1" role="dialog" id="assignTeamModel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div
+          class="modal-header d-flex justify-content-between align-items-center"
+        >
+          <h5 class="modal-title">Assign Team to the task</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+            (click)="closeAssignTeamModel()"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Team Id:</label>
+              <input
+                class="form-control"
+                id="comment-text"
+                [(ngModel)]="teamId"
+                name="teamId"
+              />
+            </div>
+          </form>
+        </div>
+        <div
+          class="modal-footer d-flex justify-content-center align-items-center"
+        >
+          <button type="button" class="btn btn-primary" (click)="assignTeam()">
+            Assign
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="closeAssignTeamModel()"
+            data-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- assign member model -->
+  <div class="modal" tabindex="-1" role="dialog" id="assignMemberModel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div
+          class="modal-header d-flex justify-content-between align-items-center"
+        >
+          <h5 class="modal-title">Assign Member to the task</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+            (click)="closeAssignMemberModel()"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Member Email:</label>
+              <input
+                class="form-control"
+                id="comment-text"
+                [(ngModel)]="memberEmail"
+                name="memberEmail"
+              />
+            </div>
+          </form>
+        </div>
+        <div
+          class="modal-footer d-flex justify-content-center align-items-center"
+        >
+          <button type="button" class="btn btn-primary" (click)="assignMember()">
+            Assign
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="closeAssignMemberModel()"
+            data-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,18 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using TMS.Application.Tasks.Common.Interfaces;
+using TMS.Application.Common.Interfaces;
 using TMS.Domain.Entities;
 using TMS.Infrastructure.Persistence;
 
 namespace TMS.Infrastructure.Repositories
 {
-    public class TaskRepository : ITaskRepository
+    public class TaskRepository(TMSDbContext _dbContext) : ITaskRepository
     {
-        private readonly TMSDbContext _dbContext;
-
-        public TaskRepository(TMSDbContext dbContext)
-        {
-            _dbContext = dbContext;
-        }
 
         public async Task AddAsync(TaskItem task)
         {
@@ -26,12 +20,29 @@ namespace TMS.Infrastructure.Repositories
 
         public async Task<TaskItem?> GetTaskByIdAsync(int taskId)
         {
-            return await _dbContext.Tasks.FirstOrDefaultAsync(t => t.TaskId == taskId);
+            return await _dbContext.Tasks
+                                   .Include(t => t.AssigendToTeam)
+                                        .ThenInclude(at => at.UserTeams)
+                                   .Include(t => t.AssignedToUser)
+                                   .Include(t => t.TaskComments)
+                                        .ThenInclude(c => c.User)
+                                   .FirstOrDefaultAsync(t => t.TaskId == taskId);
         }
 
-        public async Task UpdateAsync(TaskItem item)
+        public async Task<TaskItem?> GetTaskByIdWithAssignedTeamAsync(int taskId)
         {
-            throw new NotImplementedException();
+            return await _dbContext.Tasks
+                                   .Include(t => t.AssigendToTeam)
+                                   .ThenInclude(tm => tm.UserTeams)
+                                   .ThenInclude(ut => ut.User)
+                                   .FirstOrDefaultAsync(t => t.TaskId == taskId);
+        }
+
+        public async Task UpdateAsync(TaskItem update)
+        {
+             _dbContext.Tasks.Update(update);
+
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task DeleteAsync(int id)
@@ -43,6 +54,5 @@ namespace TMS.Infrastructure.Repositories
         {
             await _dbContext.SaveChangesAsync();
         }
-
     }
 }

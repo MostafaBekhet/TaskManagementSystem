@@ -15,7 +15,5 @@ namespace TMS.Application.Tasks.Commands.CreateTask
         public int Status { get; set; }
 
         public int PriorityLevel { get; set; }
-
-        public string CreatedByUserId { get; set; } = default!;
     }
 }

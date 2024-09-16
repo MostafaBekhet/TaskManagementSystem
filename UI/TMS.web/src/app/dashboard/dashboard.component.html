@@ -1,0 +1,45 @@
+<section class="vh-100 d-flex justify-content-center align-items-start">
+  <div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2>Dashboard</h2>
+      <button class="btn btn-primary" (click)="createNewTask()">
+        Create New Task
+      </button>
+    </div>
+
+    <div *ngIf="tasks.length === 0" class="alert alert-info">
+      No tasks available. Click on "Create New Task" to add one.
+    </div>
+
+    <table class="table table-hover" *ngIf="tasks.length > 0">
+      <thead class="table-dark">
+        <tr>
+          <th>Title</th>
+          <th>Status</th>
+          <th>Priority</th>
+          <th>Due Date</th>
+          <th style="padding: 0rem !important"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of tasks">
+          <td>{{ task.title }}</td>
+          <td>{{ getStatus(task.status) }}</td>
+          <td>{{ getPriority(task.priorityLevel) }}</td>
+          <td>{{ task.dueDate | date }}</td>
+          <td>
+            <button
+              class="btn btn-primary me-2"
+              (click)="viewDetails(task.taskId)"
+            >
+              Details
+            </button>
+            <button class="btn btn-danger" (click)="deleteTask(task.taskId)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

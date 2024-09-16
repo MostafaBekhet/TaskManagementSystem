@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using TMS.Domain.Entities;
+using TMS.Domain.Exceptions;
 
 namespace TMS.Application.Users.Commands.AssignUserRoles
 {
@@ -17,14 +18,14 @@ namespace TMS.Application.Users.Commands.AssignUserRoles
 
             if(user == null)
             {
-                return false;
+                throw new NotFoundException(nameof(User), request.UserEmail);
             }
 
             var role = await _roleManager.FindByNameAsync(request.RoleName);
 
             if(role == null)
             {
-                return false;
+                throw new NotFoundException(nameof(IdentityRole), request.RoleName);
             }
 
             await _userManger.AddToRoleAsync(user, request.RoleName);

@@ -15,8 +15,21 @@ builder.Services.AddApplication();
 
 builder.Services.AddInfrastructure(builder.Configuration);
 
-var app = builder.Build();
 
+// Add CORS policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder =>
+        {
+            builder.WithOrigins("http://localhost:4200") // Angular app URL
+                   .AllowAnyHeader()
+                   .AllowAnyMethod();
+        });
+});
+
+
+var app = builder.Build();
 
 app.UseMiddleware<ErrorHandlingMiddleWare>();
 app.UseMiddleware<RequestTimeLoggingMiddleWare>();
@@ -32,6 +45,9 @@ if (app.Environment.IsDevelopment())
 // Configure the HTTP request pipeline.
 
 app.UseHttpsRedirection();
+
+// Use CORS policy
+app.UseCors("AllowSpecificOrigin");
 
 app.MapGroup("api/v1/identity")
    .WithTags("Identity")

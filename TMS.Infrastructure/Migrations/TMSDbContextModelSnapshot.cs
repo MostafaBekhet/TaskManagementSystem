@@ -48,26 +48,6 @@ namespace TMS.Infrastructure.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", "TMS");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "490dcf48-6a7d-4933-bb54-8344c3b49c68",
-                            Name = "Administrator",
-                            NormalizedName = "Administrator"
-                        },
-                        new
-                        {
-                            Id = "eb1d12f5-116c-4c7a-8eea-d8f1dcbaa0a2",
-                            Name = "RegularUser",
-                            NormalizedName = "RegularUser"
-                        },
-                        new
-                        {
-                            Id = "6dc6018a-ee55-480c-9c99-440a27c43219",
-                            Name = "TeamLead",
-                            NormalizedName = "TeamLead"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -201,6 +181,9 @@ namespace TMS.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CommentId"));
+
+                    b.Property<DateTime>("CommentDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("CommentText")
                         .IsRequired()

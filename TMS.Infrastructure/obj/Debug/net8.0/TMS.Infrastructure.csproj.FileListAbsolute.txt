@@ -17,3 +17,4 @@ D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Inf
 D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Infrastructure\obj\Debug\net8.0\TMS.Infrastructure.pdb
 D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Infrastructure\obj\Debug\net8.0\TMS.Infrastructure.genruntimeconfig.cache
 D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Infrastructure\obj\Debug\net8.0\ref\TMS.Infrastructure.dll
+D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Infrastructure\obj\Debug\net8.0\TMS.Infrastructure.sourcelink.json

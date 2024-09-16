@@ -3,36 +3,20 @@
   "WorkspaceRootPath": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2574C43-D5D5-4093-901A-3C75735E12FE}|TMS.Application\\TMS.Application.csproj|d:\\users\\mosta\\documents\\projects\\expertflow\\clean\\task mangement system\\tms.application\\users\\validators\\assignuserrolevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2574C43-D5D5-4093-901A-3C75735E12FE}|TMS.Application\\TMS.Application.csproj|solutionrelative:tms.application\\users\\validators\\assignuserrolevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8794982E-87EA-4684-8F96-CE68343B34DE}|TMS.Infrastructure\\TMS.Infrastructure.csproj|d:\\users\\mosta\\documents\\projects\\expertflow\\clean\\task mangement system\\tms.infrastructure\\repositories\\teamtasksrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8794982E-87EA-4684-8F96-CE68343B34DE}|TMS.Infrastructure\\TMS.Infrastructure.csproj|solutionrelative:tms.infrastructure\\repositories\\teamtasksrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2574C43-D5D5-4093-901A-3C75735E12FE}|TMS.Application\\TMS.Application.csproj|d:\\users\\mosta\\documents\\projects\\expertflow\\clean\\task mangement system\\tms.application\\users\\validators\\updateuserdetailsvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2574C43-D5D5-4093-901A-3C75735E12FE}|TMS.Application\\TMS.Application.csproj|solutionrelative:tms.application\\users\\validators\\updateuserdetailsvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8794982E-87EA-4684-8F96-CE68343B34DE}|TMS.Infrastructure\\TMS.Infrastructure.csproj|d:\\users\\mosta\\documents\\projects\\expertflow\\clean\\task mangement system\\tms.infrastructure\\repositories\\teamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8794982E-87EA-4684-8F96-CE68343B34DE}|TMS.Infrastructure\\TMS.Infrastructure.csproj|solutionrelative:tms.infrastructure\\repositories\\teamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FF4CFCD-ED1F-4ACB-8745-C4046AFFE34B}|TMS.Domain\\TMS.Domain.csproj|d:\\users\\mosta\\documents\\projects\\expertflow\\clean\\task mangement system\\tms.domain\\constants\\userroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FF4CFCD-ED1F-4ACB-8745-C4046AFFE34B}|TMS.Domain\\TMS.Domain.csproj|solutionrelative:tms.domain\\constants\\userroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2574C43-D5D5-4093-901A-3C75735E12FE}|TMS.Application\\TMS.Application.csproj|d:\\users\\mosta\\documents\\projects\\expertflow\\clean\\task mangement system\\tms.application\\tasks\\queries\\getallquery\\getalltasksqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2574C43-D5D5-4093-901A-3C75735E12FE}|TMS.Application\\TMS.Application.csproj|solutionrelative:tms.application\\tasks\\queries\\getallquery\\getalltasksqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B4FE59E-DF63-4F39-8F5B-D0F4BCF5BF2A}|TaskManagementSystem.API\\TaskManagementSystem.API.csproj|d:\\users\\mosta\\documents\\projects\\expertflow\\clean\\task mangement system\\taskmanagementsystem.api\\controllers\\identitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B4FE59E-DF63-4F39-8F5B-D0F4BCF5BF2A}|TaskManagementSystem.API\\TaskManagementSystem.API.csproj|solutionrelative:taskmanagementsystem.api\\controllers\\identitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2574C43-D5D5-4093-901A-3C75735E12FE}|TMS.Application\\TMS.Application.csproj|d:\\users\\mosta\\documents\\projects\\expertflow\\clean\\task mangement system\\tms.application\\users\\commands\\assignuserroles\\assignuserrolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2574C43-D5D5-4093-901A-3C75735E12FE}|TMS.Application\\TMS.Application.csproj|solutionrelative:tms.application\\users\\commands\\assignuserroles\\assignuserrolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B4FE59E-DF63-4F39-8F5B-D0F4BCF5BF2A}|TaskManagementSystem.API\\TaskManagementSystem.API.csproj|d:\\users\\mosta\\documents\\projects\\expertflow\\clean\\task mangement system\\taskmanagementsystem.api\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B4FE59E-DF63-4F39-8F5B-D0F4BCF5BF2A}|TaskManagementSystem.API\\TaskManagementSystem.API.csproj|solutionrelative:taskmanagementsystem.api\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2574C43-D5D5-4093-901A-3C75735E12FE}|TMS.Application\\TMS.Application.csproj|d:\\users\\mosta\\documents\\projects\\expertflow\\clean\\task mangement system\\tms.application\\tasks\\validators\\createtaskvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2574C43-D5D5-4093-901A-3C75735E12FE}|TMS.Application\\TMS.Application.csproj|solutionrelative:tms.application\\tasks\\validators\\createtaskvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B4FE59E-DF63-4F39-8F5B-D0F4BCF5BF2A}|TaskManagementSystem.API\\TaskManagementSystem.API.csproj|d:\\users\\mosta\\documents\\projects\\expertflow\\clean\\task mangement system\\taskmanagementsystem.api\\taskmanagementsystem.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{5B4FE59E-DF63-4F39-8F5B-D0F4BCF5BF2A}|TaskManagementSystem.API\\TaskManagementSystem.API.csproj|solutionrelative:taskmanagementsystem.api\\taskmanagementsystem.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{5B4FE59E-DF63-4F39-8F5B-D0F4BCF5BF2A}|TaskManagementSystem.API\\TaskManagementSystem.API.csproj|d:\\users\\mosta\\documents\\projects\\expertflow\\clean\\task mangement system\\taskmanagementsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B4FE59E-DF63-4F39-8F5B-D0F4BCF5BF2A}|TaskManagementSystem.API\\TaskManagementSystem.API.csproj|solutionrelative:taskmanagementsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,110 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserRoles.cs",
-              "DocumentMoniker": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Domain\\Constants\\UserRoles.cs",
-              "RelativeDocumentMoniker": "TMS.Domain\\Constants\\UserRoles.cs",
-              "ToolTip": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Domain\\Constants\\UserRoles.cs",
-              "RelativeToolTip": "TMS.Domain\\Constants\\UserRoles.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "TeamTasksRepository.cs",
+              "DocumentMoniker": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Infrastructure\\Repositories\\TeamTasksRepository.cs",
+              "RelativeDocumentMoniker": "TMS.Infrastructure\\Repositories\\TeamTasksRepository.cs",
+              "ToolTip": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Infrastructure\\Repositories\\TeamTasksRepository.cs",
+              "RelativeToolTip": "TMS.Infrastructure\\Repositories\\TeamTasksRepository.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T18:52:01.684Z",
+              "WhenOpened": "2024-09-16T18:45:04.473Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UpdateUserDetailsValidator.cs",
-              "DocumentMoniker": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Application\\Users\\Validators\\UpdateUserDetailsValidator.cs",
-              "RelativeDocumentMoniker": "TMS.Application\\Users\\Validators\\UpdateUserDetailsValidator.cs",
-              "ToolTip": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Application\\Users\\Validators\\UpdateUserDetailsValidator.cs",
-              "RelativeToolTip": "TMS.Application\\Users\\Validators\\UpdateUserDetailsValidator.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwBYAAAAcAAAAAAAAAA==",
+              "Title": "TeamRepository.cs",
+              "DocumentMoniker": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Infrastructure\\Repositories\\TeamRepository.cs",
+              "RelativeDocumentMoniker": "TMS.Infrastructure\\Repositories\\TeamRepository.cs",
+              "ToolTip": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Infrastructure\\Repositories\\TeamRepository.cs",
+              "RelativeToolTip": "TMS.Infrastructure\\Repositories\\TeamRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T18:41:23.659Z",
+              "WhenOpened": "2024-09-16T18:45:02.974Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AssignUserRoleValidator.cs",
-              "DocumentMoniker": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Application\\Users\\Validators\\AssignUserRoleValidator.cs",
-              "RelativeDocumentMoniker": "TMS.Application\\Users\\Validators\\AssignUserRoleValidator.cs",
-              "ToolTip": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Application\\Users\\Validators\\AssignUserRoleValidator.cs",
-              "RelativeToolTip": "TMS.Application\\Users\\Validators\\AssignUserRoleValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "GetAllTasksQueryHandler.cs",
+              "DocumentMoniker": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Application\\Tasks\\Queries\\GetAllQuery\\GetAllTasksQueryHandler.cs",
+              "RelativeDocumentMoniker": "TMS.Application\\Tasks\\Queries\\GetAllQuery\\GetAllTasksQueryHandler.cs",
+              "ToolTip": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Application\\Tasks\\Queries\\GetAllQuery\\GetAllTasksQueryHandler.cs",
+              "RelativeToolTip": "TMS.Application\\Tasks\\Queries\\GetAllQuery\\GetAllTasksQueryHandler.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T18:41:09.162Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AssignUserRoleCommandHandler.cs",
-              "DocumentMoniker": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Application\\Users\\Commands\\AssignUserRoles\\AssignUserRoleCommandHandler.cs",
-              "RelativeDocumentMoniker": "TMS.Application\\Users\\Commands\\AssignUserRoles\\AssignUserRoleCommandHandler.cs",
-              "ToolTip": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Application\\Users\\Commands\\AssignUserRoles\\AssignUserRoleCommandHandler.cs",
-              "RelativeToolTip": "TMS.Application\\Users\\Commands\\AssignUserRoles\\AssignUserRoleCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T18:24:44.718Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CreateTaskValidator.cs",
-              "DocumentMoniker": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Application\\Tasks\\Validators\\CreateTaskValidator.cs",
-              "RelativeDocumentMoniker": "TMS.Application\\Tasks\\Validators\\CreateTaskValidator.cs",
-              "ToolTip": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TMS.Application\\Tasks\\Validators\\CreateTaskValidator.cs",
-              "RelativeToolTip": "TMS.Application\\Tasks\\Validators\\CreateTaskValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T16:40:00.555Z",
+              "WhenOpened": "2024-09-16T18:44:29.795Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "IdentityController.cs",
-              "DocumentMoniker": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TaskManagementSystem.API\\Controllers\\IdentityController.cs",
-              "RelativeDocumentMoniker": "TaskManagementSystem.API\\Controllers\\IdentityController.cs",
-              "ToolTip": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TaskManagementSystem.API\\Controllers\\IdentityController.cs",
-              "RelativeToolTip": "TaskManagementSystem.API\\Controllers\\IdentityController.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAQwAcAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TaskManagementSystem.API\\Program.cs",
+              "RelativeDocumentMoniker": "TaskManagementSystem.API\\Program.cs",
+              "ToolTip": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TaskManagementSystem.API\\Program.cs",
+              "RelativeToolTip": "TaskManagementSystem.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T15:43:51.273Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TaskManagementSystem.API.http",
-              "DocumentMoniker": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TaskManagementSystem.API\\TaskManagementSystem.API.http",
-              "RelativeDocumentMoniker": "TaskManagementSystem.API\\TaskManagementSystem.API.http",
-              "ToolTip": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TaskManagementSystem.API\\TaskManagementSystem.API.http",
-              "RelativeToolTip": "TaskManagementSystem.API\\TaskManagementSystem.API.http",
-              "ViewState": "AgIAACAAAAAAAAAAAAAgwCoAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-09-07T13:18:52.538Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TasksController.cs",
-              "DocumentMoniker": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TaskManagementSystem.API\\Controllers\\TasksController.cs",
-              "RelativeDocumentMoniker": "TaskManagementSystem.API\\Controllers\\TasksController.cs",
-              "ToolTip": "D:\\Users\\mosta\\Documents\\projects\\expertflow\\clean\\Task Mangement System\\TaskManagementSystem.API\\Controllers\\TasksController.cs",
-              "RelativeToolTip": "TaskManagementSystem.API\\Controllers\\TasksController.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAYwDIAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-06T15:58:32.567Z",
+              "WhenOpened": "2024-09-16T17:58:01.804Z",
               "EditorCaption": ""
             }
           ]

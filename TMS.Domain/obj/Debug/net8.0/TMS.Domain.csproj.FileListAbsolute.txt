@@ -10,3 +10,4 @@ D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Dom
 D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Domain\obj\Debug\net8.0\refint\TMS.Domain.dll
 D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Domain\obj\Debug\net8.0\TMS.Domain.pdb
 D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Domain\obj\Debug\net8.0\ref\TMS.Domain.dll
+D:\Users\mosta\Documents\projects\expertflow\clean\Task Mangement System\TMS.Domain\obj\Debug\net8.0\TMS.Domain.sourcelink.json

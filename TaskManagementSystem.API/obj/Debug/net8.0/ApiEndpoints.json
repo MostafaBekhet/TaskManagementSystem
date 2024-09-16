@@ -381,6 +381,22 @@
   },
   {
     "ContainingType": "TaskManagementSystem.API.Controllers.TasksController",
+    "Method": "CreateTask",
+    "RelativePath": "api/v1/tasks",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "TMS.Application.Tasks.Commands.CreateTask.CreateTaskCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementSystem.API.Controllers.TasksController",
     "Method": "GetAllTasks",
     "RelativePath": "api/v1/tasks",
     "HttpMethod": "GET",
@@ -398,22 +414,6 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "TaskManagementSystem.API.Controllers.TasksController",
-    "Method": "CreateTask",
-    "RelativePath": "api/v1/tasks",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "command",
-        "Type": "TMS.Application.Tasks.Commands.CreateTask.CreateTaskCommand",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
   },
   {
     "ContainingType": "TaskManagementSystem.API.Controllers.TasksController",
@@ -443,6 +443,27 @@
   },
   {
     "ContainingType": "TaskManagementSystem.API.Controllers.TasksController",
+    "Method": "UpdateTask",
+    "RelativePath": "api/v1/tasks/{taskId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taskId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "commandDto",
+        "Type": "TMS.Application.Tasks.Dtos.UpdateTaskDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementSystem.API.Controllers.TasksController",
     "Method": "DeleteTask",
     "RelativePath": "api/v1/tasks/{taskId}",
     "HttpMethod": "DELETE",
@@ -452,6 +473,147 @@
       {
         "Name": "taskId",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementSystem.API.Controllers.CommentsController",
+    "Method": "CreateTaskComments",
+    "RelativePath": "api/v1/tasks/{taskId}/comments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taskId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "comment",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementSystem.API.Controllers.TeamsController",
+    "Method": "GetAllTeams",
+    "RelativePath": "api/v1/teams",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[TMS.Application.Teams.Dtos.TeamViewDto, TMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TaskManagementSystem.API.Controllers.TeamsController",
+    "Method": "CreateTeam",
+    "RelativePath": "api/v1/teams",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "TMS.Application.Teams.Commands.CreateTeam.CreateTeamCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementSystem.API.Controllers.TeamsController",
+    "Method": "GetTeamDetails",
+    "RelativePath": "api/v1/teams/{teamId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "teamId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TMS.Application.Teams.Dtos.TeamDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TaskManagementSystem.API.Controllers.TeamsController",
+    "Method": "DeleteTeam",
+    "RelativePath": "api/v1/teams/{teamId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "teamId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementSystem.API.Controllers.TeamsController",
+    "Method": "addUserToTeam",
+    "RelativePath": "api/v1/teams/{teamId}/adduser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "teamId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "UserEmail",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementSystem.API.Controllers.TeamsController",
+    "Method": "removeUserFromTeam",
+    "RelativePath": "api/v1/teams/{teamId}/removeuser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "teamId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "UserEmail",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

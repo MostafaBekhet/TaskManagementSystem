@@ -1,0 +1,111 @@
+<section class="vh-100 d-flex justify-content-center align-items-center">
+  <div class="card m-3">
+    <h5 class="card-header text-center">Registration Form</h5>
+    <div class="card-body p-4">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="form-group col-5">
+            <label>First Name</label>
+            <input
+              type="text"
+              formControlName="firstName"
+              class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f['firstName'].errors }"
+            />
+            <div
+              *ngIf="submitted && f['firstName'].errors"
+              class="invalid-feedback"
+            >
+              <div *ngIf="f['firstName'].errors['required']">
+                First Name is required
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-5">
+            <label>Last Name</label>
+            <input
+              type="text"
+              formControlName="lastName"
+              class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f['lastName'].errors }"
+            />
+            <div
+              *ngIf="submitted && f['lastName'].errors"
+              class="invalid-feedback"
+            >
+              <div *ngIf="f['lastName'].errors['required']">
+                Last Name is required
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input
+            type="text"
+            formControlName="email"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+          />
+          <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+            <div *ngIf="f['email'].errors['required']">Email is required</div>
+            <div *ngIf="f['email'].errors['email']">
+              Email must be a valid email address
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input
+            type="password"
+            formControlName="password"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+          />
+          <div
+            *ngIf="submitted && f['password'].errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="f['password'].errors['required']">
+              Password is required
+            </div>
+            <div *ngIf="f['password'].errors['minlength']">
+              Password must be at least 6 characters long
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Repeat Password</label>
+          <input
+            type="password"
+            formControlName="repeatPassword"
+            class="form-control"
+            [ngClass]="{
+              'is-invalid': submitted && f['repeatPassword'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && f['repeatPassword'].errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="f['repeatPassword'].errors['required']">
+              Repeat Password is required
+            </div>
+            <div *ngIf="f['repeatPassword'].errors['mustMatch']">
+              Passwords must match
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center p-4">
+          <button class="btn btn-primary me-2">Register</button>
+          <button class="btn btn-secondary" type="reset" (click)="onReset()">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

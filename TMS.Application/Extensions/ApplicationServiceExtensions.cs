@@ -4,8 +4,10 @@ using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using TMS.Application.Tasks.Common.Behaviors;
-using TMS.Application.Tasks.Common.Helper;
+using TMS.Application.Authorization.Services.Comment;
+using TMS.Application.Authorization.Services.Task;
+using TMS.Application.Common.Behaviors;
+using TMS.Application.Common.Helper;
 using TMS.Application.Users;
 
 namespace TMS.Application.Extensions
@@ -34,6 +36,9 @@ namespace TMS.Application.Extensions
             services.AddScoped<IUserContext , UserContext>();
 
             services.AddHttpContextAccessor();
+
+            services.AddScoped<ITaskAuthorizationService, TaskAuthorizationService>();
+            services.AddScoped<ICommentAuthorizationService, CommentAuthorizationService>();
         }
     }
 }

@@ -1,0 +1,9 @@
+.container {
+  margin-top: 5%;
+
+  padding-bottom: 2%;
+
+  color: #cbb1b171;
+
+  backdrop-filter: blur(10px);
+}

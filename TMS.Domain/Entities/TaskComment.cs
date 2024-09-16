@@ -17,6 +17,11 @@ namespace TMS.Domain.Entities
         public int TaskId { get; set; }
         public TaskItem TaskItem { get; set; } = default!;
 
-        public DateTime CommentDate { get; } = DateTime.Now;
+        public DateTime CommentDate { get; set; }
+
+        public TaskComment()
+        {
+            CommentDate = DateTime.Now;
+        }
     }
 }

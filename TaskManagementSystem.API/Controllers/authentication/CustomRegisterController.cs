@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
+﻿using Azure.Core;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using TMS.Application.Users.Dtos;
+using TMS.Domain.Constants;
 using TMS.Domain.Entities;
 
 namespace TaskManagementSystem.API.Controllers.authentication
@@ -59,6 +61,8 @@ namespace TaskManagementSystem.API.Controllers.authentication
             {
                 return CreateValidationProblem(result);
             }
+
+            await userManager.AddToRoleAsync(user, UserRoles.RegularUser);
 
             //await SendConfirmationEmailAsync(user, userManager, context, email);
             return TypedResults.Ok();

@@ -1,0 +1,254 @@
+<section class="vh-100 d-flex justify-content-center align-items-start">
+  <div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2>Teams</h2>
+      <button class="btn btn-primary" (click)="openCreateTeamModel()">
+        Create Team
+      </button>
+    </div>
+
+    <div *ngIf="teams.length === 0" class="alert alert-info">
+      No Teams available.
+    </div>
+
+    <table class="table table-hover" *ngIf="teams.length > 0">
+      <thead class="table-dark">
+        <tr>
+          <th>Team Id</th>
+          <th>Team Name</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Loop through teams -->
+        <ng-container *ngFor="let team of teams">
+          <tr>
+            <td>{{ team.teamId }}</td>
+            <td>{{ team.teamName }}</td>
+            <td>
+              <button
+                class="btn btn-primary me-1"
+                (click)="toggleMembers(team.teamId)"
+              >
+                Members
+              </button>
+              <button
+                class="btn btn-primary me-1"
+                (click)="openaddMemberModel(team.teamId)"
+              >
+                Add Member
+              </button>
+              <button
+                class="btn btn-danger me-1"
+                (click)="openRemoveMemberModel(team.teamId)"
+              >
+                Remove Member
+              </button>
+              <button
+                class="btn btn-primary me-1"
+                (click)="toggleAssignedTasks(team.teamId)"
+              >
+                Assigned Tasks
+              </button>
+              <button class="btn btn-danger" (click)="deleteTeam(team.teamId)">
+                Delete
+              </button>
+            </td>
+          </tr>
+
+          <!-- Show  team members -->
+          <tr *ngIf="expandedTeamId === team.teamId">
+            <td colspan="3">
+              <ul class="list-group">
+                <div *ngIf="team.members.length === 0">
+                  Team has no members yet.
+                </div>
+                <li class="list-group-item" *ngFor="let member of team.members">
+                  <div class="d-flex justify-content-between">
+                    <span
+                      >Name:
+                      {{ member.firstName + " " + member.lastName }}</span
+                    >
+                    <span>Email: {{ member.email }}</span>
+                  </div>
+                </li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Show  team assigned tasks -->
+          <tr *ngIf="expandedTasksTeamId === team.teamId">
+            <td colspan="3">
+              <ul class="list-group">
+                <div *ngIf="team.tasks.length === 0">
+                  Team has no tasks yet.
+                </div>
+                <li class="list-group-item" *ngFor="let task of team.tasks">
+                  <div class="d-flex justify-content-between">
+                    <span>TaskId: {{ task.taskId }}</span>
+                    <span>Title: {{ task.title }}</span>
+                    <span>Status: {{ getStatus(task.status) }}</span>
+                    <span>Prioity: {{ getPriority(task.priorityLevel) }}</span>
+                    <span>DueDte: {{ formatDateForInput(task.dueDate) }}</span>
+                  </div>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- create team model -->
+  <div class="modal" tabindex="-1" role="dialog" id="createTeamModel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div
+          class="modal-header d-flex justify-content-between align-items-center"
+        >
+          <h5 class="modal-title">Create Team</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+            (click)="closeCreateTeamModel()"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label"
+                >Team Name:</label
+              >
+              <input
+                class="form-control"
+                id="newTeam-name"
+                [(ngModel)]="newTeamName"
+                name="newTeamName"
+              />
+            </div>
+          </form>
+        </div>
+        <div
+          class="modal-footer d-flex justify-content-center align-items-center"
+        >
+          <button type="button" class="btn btn-primary" (click)="createTeam()">
+            Create
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="closeCreateTeamModel()"
+            data-dismiss="modal"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- add member model -->
+  <div class="modal" tabindex="-1" role="dialog" id="addMemberModel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div
+          class="modal-header d-flex justify-content-between align-items-center"
+        >
+          <h5 class="modal-title">Add Member To Team</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+            (click)="closeAddMemberModel()"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Email:</label>
+              <input
+                class="form-control"
+                id="addMember-email"
+                [(ngModel)]="addMemberEmail"
+                name="addMemberEmail"
+              />
+            </div>
+          </form>
+        </div>
+        <div
+          class="modal-footer d-flex justify-content-center align-items-center"
+        >
+          <button type="button" class="btn btn-primary" (click)="addMember()">
+            Add
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="closeAddMemberModel()"
+            data-dismiss="modal"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- remove member model -->
+  <div class="modal" tabindex="-1" role="dialog" id="removeMemberModel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div
+          class="modal-header d-flex justify-content-between align-items-center"
+        >
+          <h5 class="modal-title">Remove Member from Team</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+            (click)="closeRemoveMemberModel()"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Email:</label>
+              <input
+                class="form-control"
+                id="removeMember-email"
+                [(ngModel)]="removeMemberEmail"
+                name="removeMemberEmail"
+              />
+            </div>
+          </form>
+        </div>
+        <div
+          class="modal-footer d-flex justify-content-center align-items-center"
+        >
+          <button type="button" class="btn btn-danger" (click)="removeMember()">
+            Remove
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="closeRemoveMemberModel()"
+            data-dismiss="modal"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
